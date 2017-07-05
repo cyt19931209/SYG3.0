@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonelModel.h"
 
-@interface StaffEditorViewController : UIViewController
+@interface StaffEditorViewController : UITableViewController
+
+@property (nonatomic,strong) PersonelModel *model;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageV;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabe;
 
 @end

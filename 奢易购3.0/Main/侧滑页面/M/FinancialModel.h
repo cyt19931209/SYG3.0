@@ -8,6 +8,13 @@
 
 #import "BaseModel.h"
 
+
 @interface FinancialModel : BaseModel
+
+
+@property (nonatomic,copy) NSString *type;
+@property (nonatomic,copy) NSString *use_name;
+@property (nonatomic,copy) NSString *account;
+@property (nonatomic,copy) NSString *financialId;
 
 @end

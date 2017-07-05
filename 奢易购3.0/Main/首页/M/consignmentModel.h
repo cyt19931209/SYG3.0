@@ -10,4 +10,10 @@
 
 @interface consignmentModel : BaseModel
 
+
+@property (nonatomic,strong) NSArray *item;
+@property (nonatomic,copy) NSString *time;
+@property (nonatomic,copy) NSString *customer_name;
+@property (nonatomic,copy) NSString *mobile;
+
 @end

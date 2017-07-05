@@ -10,4 +10,7 @@
 
 @interface SetPhoneOrEmailViewController : UIViewController
 
+
+@property (nonatomic,assign) BOOL isEmail;
+
 @end

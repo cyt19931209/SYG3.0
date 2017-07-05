@@ -10,4 +10,10 @@
 
 @interface PersonelModel : BaseModel
 
+
+@property (nonatomic,copy) NSString *user_name;
+@property (nonatomic,copy) NSString *mobile;
+@property (nonatomic,copy) NSString *type;
+@property (nonatomic,copy) NSString *personelId;
+
 @end

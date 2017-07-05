@@ -7,7 +7,6 @@
 //
 
 #import "PhotoScrollView.h"
-#import "ReportViewController.h"
 
 
 @implementation PhotoScrollView
@@ -65,13 +64,13 @@
     _imageUrl=imageUrl;
     
 //    4.把图片数据显示在photoImageView上面
-    [photoImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",image_API,_imageUrl]]];
+    [photoImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",_imageUrl]]];
     
 }
-- (void)setPhotosId:(NSString *)photosId{
-    _photosId = photosId;
-
-}
+//- (void)setPhotosId:(NSString *)photosId{
+//    _photosId = photosId;
+//
+//}
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     
     return photoImageView;
@@ -83,7 +82,7 @@
 {
     NSLog(@"长按");
     if (longPress.state == UIGestureRecognizerStateBegan) {
-        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"保存到相册" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"保存到相册", @"举报",nil];
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"保存到相册" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"保存到相册", nil,nil];
         [sheet showInView:photoImageView];
     }
 }
@@ -92,18 +91,8 @@
 {
     if (buttonIndex == 0) {
         UIImageWriteToSavedPhotosAlbum(photoImageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-    }else if (buttonIndex == 1){
-        ReportViewController *reportVC = [[ReportViewController alloc]
-                                      init];
-        reportVC.dic = @{
-                         @"type":@"3",
-                         @"id":_photosId
-                         };
-        
-        [self.viewController.navigationController pushViewController:reportVC animated:YES];
     }
 }
-
 // 图片保存完成
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {

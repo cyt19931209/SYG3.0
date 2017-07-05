@@ -10,4 +10,12 @@
 
 @interface StockPriceViewController : UIViewController
 
+
+@property (nonatomic,copy) NSString *type;
+@property (nonatomic,copy) NSString *KHId;
+
+@property (nonatomic,copy) NSArray *arr;
+
+@property (nonatomic,copy) NSString *goods_id;
 @end
+

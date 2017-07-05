@@ -11,7 +11,9 @@
 @interface ScanCollectionView : UICollectionView<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 
+@property (nonatomic,assign) NSInteger index;
+
 @property(nonatomic,strong)NSArray *imageURLArr;
-@property(nonatomic,strong)NSArray *photosIdArr;
+//@property(nonatomic,strong)NSArray *photosIdArr;
 
 @end

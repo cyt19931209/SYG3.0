@@ -10,4 +10,11 @@
 
 @interface SticksCell : UITableViewCell
 
+
+@property (nonatomic,strong) NSDictionary *dic;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end

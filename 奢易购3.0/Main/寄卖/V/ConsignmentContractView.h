@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConsignmentContractView : UIView
+@interface ConsignmentContractView : UIView<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
+
+
+
+@property (nonatomic,strong) UITableView *myTableView;
+
+@property (nonatomic,strong) NSMutableArray *dataArr;
 
 @end

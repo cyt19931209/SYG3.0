@@ -10,4 +10,7 @@
 
 @interface ExpressWebViewController : UIViewController
 
+
+@property (nonatomic,strong) NSString *expressStr;
+
 @end

@@ -10,4 +10,7 @@
 
 @interface CashierViewController : UIViewController
 
+
+@property (nonatomic,strong) NSDictionary *dic;
+
 @end

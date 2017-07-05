@@ -10,4 +10,8 @@
 
 @interface StockCellectionCell : UICollectionViewCell
 
+@property (nonatomic,copy) NSString *url;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+
 @end

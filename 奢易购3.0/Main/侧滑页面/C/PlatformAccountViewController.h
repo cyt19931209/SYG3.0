@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlatformAccountViewController : UIViewController
+@interface PlatformAccountViewController : UITableViewController
 
 @end

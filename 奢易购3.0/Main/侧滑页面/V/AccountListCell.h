@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AccountListCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *selectButton;
+@property (weak, nonatomic) IBOutlet UIButton *delectButton;
 
+@property (nonatomic,strong) NSDictionary *dic;
 @end
+

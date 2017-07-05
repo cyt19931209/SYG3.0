@@ -10,4 +10,10 @@
 
 @interface LabelClassificationViewController : UIViewController
 
+
+
+@property (nonatomic,copy) NSString *category_id;
+
+@property (nonatomic,copy) NSArray *oldArr;
+
 @end

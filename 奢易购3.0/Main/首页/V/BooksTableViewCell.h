@@ -10,4 +10,9 @@
 
 @interface BooksTableViewCell : UITableViewCell
 
+@property (nonatomic,strong) NSDictionary *dic;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+
 @end

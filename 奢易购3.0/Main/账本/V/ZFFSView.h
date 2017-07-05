@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZFFSView : UIView
+@interface ZFFSView : UIView<UITableViewDataSource,UITableViewDelegate>
+
+
+
+@property (nonatomic,strong) NSArray *dataArr;
 
 @end

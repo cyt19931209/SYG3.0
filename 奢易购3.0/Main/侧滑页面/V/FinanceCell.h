@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FinancialModel.h"
+#import "PersonelModel.h"
 
 @interface FinanceCell : UITableViewCell
 
+
+@property (nonatomic,strong)FinancialModel *model;
+@property (nonatomic,strong)PersonelModel *model1;
+@property (weak, nonatomic) IBOutlet UILabel *accountLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *typeImage;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *personTypeImage;
 @end

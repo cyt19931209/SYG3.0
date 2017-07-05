@@ -21,9 +21,10 @@
 //父类的运算
 -(NSString*)getResult
 {
-    double result=0;
+    double result = 0;
     NSString *str=[NSString stringWithFormat:@"%lf",result];
     return str;
+    
 }
 @end
 

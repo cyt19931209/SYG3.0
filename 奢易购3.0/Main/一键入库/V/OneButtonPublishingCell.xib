@@ -1,18 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OneButtonPublishingCell">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oyt-QL-jsb">
+                        <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="0RH-c0-YGM"/>
+                            <constraint firstAttribute="height" constant="52" id="Z7O-p3-kc0"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Combined Shape@2x" translatesAutoresizingMaskIntoConstraints="NO" id="C5S-M8-seW">
+                        <rect key="frame" x="37" y="0.0" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="20P-M9-1sr"/>
+                            <constraint firstAttribute="height" constant="15" id="Bv4-rn-TSf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBW-pd-BiP" userLabel="1">
+                        <rect key="frame" x="0.0" y="0.0" width="52" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="封面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-M8-yyt">
+                        <rect key="frame" x="7" y="19" width="39" height="18"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="426-UV-KHb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstItem="f9c-M8-yyt" firstAttribute="top" secondItem="C5S-M8-seW" secondAttribute="bottom" constant="4" id="1Ri-wJ-fmM"/>
+                <constraint firstAttribute="trailing" secondItem="oyt-QL-jsb" secondAttribute="trailing" id="9n0-eu-GrS"/>
+                <constraint firstItem="oyt-QL-jsb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GCF-i5-28b"/>
+                <constraint firstAttribute="trailing" secondItem="C5S-M8-seW" secondAttribute="trailing" id="YXm-L5-opb"/>
+                <constraint firstItem="C5S-M8-seW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="a8q-aX-0uA"/>
+                <constraint firstAttribute="bottom" secondItem="oyt-QL-jsb" secondAttribute="bottom" id="bIj-1C-gFi"/>
+                <constraint firstItem="oyt-QL-jsb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fT9-jS-aYS"/>
+                <constraint firstItem="f9c-M8-yyt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="sSn-Lj-ify"/>
+                <constraint firstAttribute="trailing" secondItem="f9c-M8-yyt" secondAttribute="trailing" constant="6" id="wwz-Pu-q6t"/>
+            </constraints>
+            <connections>
+                <outlet property="FMLabel" destination="f9c-M8-yyt" id="om7-i3-E98"/>
+                <outlet property="JBImageV" destination="C5S-M8-seW" id="Z8x-Br-Jj6"/>
+                <outlet property="JBLabel" destination="dBW-pd-BiP" id="Eou-lu-4tU"/>
+                <outlet property="imageV" destination="oyt-QL-jsb" id="f2d-Ij-mVL"/>
+            </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Combined Shape@2x" width="72" height="54"/>
+    </resources>
 </document>

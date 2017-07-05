@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ConsignmentContractView" id="iN0-l3-epB" customClass="ConsignmentContractView">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="450"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMW-Xh-gf7">
+                    <rect key="frame" x="12" y="374" width="330" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="nmz-51-Xmg"/>
+                    </constraints>
+                    <state key="normal" image="确定并生产寄卖合约初始（寄卖）.png"/>
+                    <connections>
+                        <action selector="tureAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="C2d-A3-vOx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dMW-Xh-gf7" secondAttribute="trailing" constant="13" id="7tb-WZ-ozq"/>
+                <constraint firstItem="dMW-Xh-gf7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="Lp3-T1-9fs"/>
+                <constraint firstItem="dMW-Xh-gf7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gSf-qr-e0b"/>
+                <constraint firstAttribute="bottom" secondItem="dMW-Xh-gf7" secondAttribute="bottom" constant="32" id="swy-Ts-xRG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="确定并生产寄卖合约初始（寄卖）.png" width="660" height="88"/>
+    </resources>
 </document>

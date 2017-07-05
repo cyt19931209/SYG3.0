@@ -8,8 +8,219 @@
 
 #ifndef SYGAPI_pch
 #define SYGAPI_pch
+#import "RGBColor.h"
+#import "UIViewExt.h"
+#import "DataSeviece.h"
+#import "NULLHandle.h"
+#import "UIImageView+WebCache.h"
+#import "MoneyEditView.h"
+#import "WeiboSDK.h"
+#import "MD5CommonDigest.h"
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define kAppKey         @"1799887612"
+#define kRedirectURI    @"https://api.weibo.com/oauth2/default.html"
+
+
+//屏宽屏高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+//
+#define BaseUrl @"http://test.sheyigou.com/index.php?s=/Api/"
+#define imgUrl @"http://images.sheyigou.com"
+
+//
+//
+//#define BaseUrl @"http://syg.hpdengshi.com/index.php?s=/Api/"
+//
+//#define imgUrl @"http://imagetest.sheyigou.com"
+//
+//
+//#define imgUrl @"http://syg.hpdengshi.com"
+
+//#define imgUrl @"http://test.sheyigou.com"
+
+//
+//主登录登录
+#define  master_loginhtmlA_API @"Login/master_login.html"
+//子账号登录
+#define child_loginhtml_API @"Login/child_login.html"
+
+//验证码
+#define send_codehtml_API @"SmsCode/send_code.html"
+
+//账号注册
+#define registerhtml_API @"User/register.html"
+
+//找回密码
+#define find_passwordhtml @"User/find_password.html"
+//获取当前用户信息
+#define get_userinfohtml @"User/get_userinfo.html"
+//获取财务账户列表
+#define get_accounthtm_API @"PayAccount/get_account.html"
+//获取财务账户类型
+#define get_account_typehtml @"PayAccount/get_account_type.html"
+//添加财务账户
+#define add_accounthtml @"PayAccount/add_account.html"
+//删除财务账号
+#define delete_accounthtml @"PayAccount/delete_account.html"
+//编辑财务账户
+#define edit_accounthtml @"PayAccount/edit_account.html"
+//人员账户列表
+#define get_userhtml @"User/get_user.html"
+//人员账户删除
+#define delete_userhtml @"User/delete_user.html"
+//添加人员账户
+#define add_userhtml @"User/add_user.html"
+//编辑人员账号
+#define edit_userhtml @"User/edit_user.html"
+//编辑商户
+#define edit_shop_infohtml @"Shop/edit_shop_info.html"
+
+//获取商户的货物分类
+#define get_category_listhtml @"Category/get_category_list.html"
+//修改货物分类
+#define edit_categoryhtml @"Category/edit_category.html"
+//删除货物分类
+#define delete_categoryhtml @"Category/delete_category.html"
+//添加货物分类
+#define add_categoryhtml @"Category/add_category.html"
+//获取客户列表
+#define get_customerhtml @"Customer/get_customer.html"
+//编辑客户列表
+#define edit_customerhtml @"Customer/edit_customer.html"
+//货物总数进库出库数据统计
+#define get_goods_input_outhtml @"Statistics/get_goods_input_out.html"
+//获取库存商品列表
+#define get_goods_listhtml @"Goods/get_goods_list.html"
+//获取库存商品详情
+#define get_goodshtml @"Goods/get_goods.html"
+//编辑商品
+#define edit_goodshtm @"Goods/edit_goods.html"
+//添加商品
+#define add_goodshtml @"Goods/edit_goods.html"
+//删除商品
+#define delete_goodshtml @"Goods/delete_goods.html"
+//添加客户
+#define add_customerhtml @"Customer/add_customer.html"
+//获取添加编辑时需要的信息
+#define create_goods_snhtml @"Goods/create_goods_sn.html"
+//获取销售记录列表
+#define get_sales_list_by_timehtml @"Sales/get_sales_list_by_time.html"
+//获取销售详情
+#define Salesget_saleshtml @"Sales/get_sales.html"
+//获取寄卖的统计数据
+#define get_consighment_statisticshtml @"Statistics/get_consighment_statistics.html"
+//获取账本列表数据
+#define pay_log_recordhtml @"PayLog/pay_log_record.html"
+//获取账本统计数据
+#define get_input_payhtml @"Statistics/get_input_pay.html"
+//获取寄卖商品信息列表
+#define get_consighment_listhtml @"Consighment/get_consighment_list.html"
+//获取寄卖详情
+#define get_consighmenthtml @"Consighment/get_consighment.html"
+//获取销售利润统计
+#define get_sales_statisticshtml @"Statistics/get_sales_statistics.html"
+//账本记录详情
+#define get_payloghtml @"PayLog/get_paylog.html"
+
+//搜索寄卖数据
+#define consighment_searchhtml @"Search/consighment_search.html"
+//账本搜索
+#define paylog_searchhtml @"Search/paylog_search.html"
+//库存搜索
+#define goods_searchhtml @"Search/goods_search.html"
+//搜索销售记录
+#define sales_searchhtml @"Search/sales_search.html"
+//搜索全部 账本 寄卖 销售 库存
+#define search_allhtml @"Search/search_all.html"
+//收支记录标记已阅读
+#define pay_log_readhtml @"PayLog/pay_log_read.html"
+
+//首页销售挂单列表
+#define uninput_sales_listhtml @"Sales/uninput_sales_list.html"
+//首页寄卖挂单列表
+#define get_consihment_unpayhtml @"Consighment/get_consihment_unpay.html"
+//首页回收挂单列表
+#define get_recovery_unpayhtml @"Recovery/get_recovery_unpay.html"
+//首页详情
+#define get_saleshtml @"Sales/get_sales.html"
+//寄卖取回
+#define redemptionhtml @"Goods/redemption.html"
+//寄卖结算
+#define consighmenthtml @"Sales/consighment.html"
+//添加销售
+#define add_saleshtml @"Sales/add_sales.html"
+
+//销售时搜索置换的商品
+#define search_displace_goodshtml @"Goods/search_displace_goods.html"
+//
+#define get_goods_by_snhtml @"Search/get_goods_by_sn.html"
+//销售挂单
+#define continutehtml @"Sales/continute.html"
+//收银台收付款
+#define add_pay_loghtml @"PayLog/add_pay_log.html"
+
+//消息判断
+#define get_unreadhtml @"Messagerie/get_unread.html"
+//消息列表
+#define get_messagerie_listhtml @"Messagerie/get_messagerie_list.html"
+//消息详情
+#define get_messagerie_detailhtml @"Messagerie/get_messagerie_detail.html"
+//图片上传
+#define uploadimghtml @"Upload/uploadimg.html"
+//重新寄卖
+#define re_consighmenthtml @"Goods/re_consighment.html"
+//取消回收商品挂单
+#define Goodscancel_pausehtml @"Goods/cancel_pause.html"
+//取消销售挂单
+#define Salescancel_pausehtml @"Sales/cancel_pause.html"
+
+//分类获取属性字段
+#define get_category_attributehtml @"Category/get_category_attribute.html"
+
+//删除销售记录
+#define delete_saleshtml @"Sales/delete_sales.html"
+
+//修改收支记录
+#define edit_pay_loghtml @"PayLog/edit_pay_log.html"
+
+//更新手机号或者邮箱
+#define change_accounthtml @"User/change_account.html"
+
+//分享获取品牌
+#define get_share_brandshtml @"Share/get_share_brands.html"
+
+//获取分享的分类
+#define get_share_categoryhtml @"Share/get_share_category.html"
+//分享获取库存
+#define Shareget_goods_listhtml @"Share/get_goods_list.html"
+//添加绑定账号
+#define Shareadd_share_accounthtml @"Share/add_share_account.html"
+//获取绑定帐号
+#define Shareget_share_accounthtml @"Share/get_share_account.html"
+//编辑绑定账户
+#define edit_share_accounthtml @"Share/edit_share_account.html"
+//删除绑定账户
+#define delete_share_accounthtml @"Share/delete_share_account.html"
+//编辑添加分享记录
+#define goods_sharehtml @"Share/goods_share.html"
+//分享商品接口
+#define share_outhtml @"Share/share_out.html"
+//删除绑定账户
+#define delete_share_accounthtml @"Share/delete_share_account.html"
+
+//修改商品信息
+#define update_goodshtml @"Goods/update_goods.html"
+//更新新浪授权信息
+#define up_sae_accesss_tokenhtml @"Share/up_sae_access_token.html"
+
+//获取商品总数量
+#define goods_counthtml @"Goods/goods_count.html"
+//获取七牛上传的token
+#define get_qiniu_tokenhtml @"Qiniu/get_qiniu_token.html"
+
+//品牌
+#define get_brands_by_category_idhtml @"Category/get_brands_by_category_id.html"
+
 
 #endif /* SYGAPI_pch */

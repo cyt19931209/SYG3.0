@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditBooksViewController : UIViewController
+@interface EditBooksViewController : UITableViewController
+
+
+@property (nonatomic,strong) NSDictionary *dataDic;
 
 @end

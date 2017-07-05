@@ -15,5 +15,7 @@
 
 @property(nonatomic,strong)NSArray *imageURLArr;
 
-@property(nonatomic,strong)NSArray *photosIdArr;
+@property (nonatomic,assign) BOOL isDelegate;
+
+//@property(nonatomic,strong)NSArray *photosIdArr;
 @end

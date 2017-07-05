@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonDigest.h>
 
 @interface MD5CommonDigest : NSObject
+
+
++(void)MD5:(NSString *)md5Str
+          success:(void (^)(id result))successBlock
+          failure:(void (^)(NSError *error))failBlock;
+
+
+
 
 @end

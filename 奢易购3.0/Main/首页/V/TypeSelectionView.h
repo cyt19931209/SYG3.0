@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TypeSelectionView : UIView
+@interface TypeSelectionView : UIView<UIAlertViewDelegate>{
+    
+    UIScrollView *typeScrollView;
+}
+
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+
+@property (nonatomic,strong) NSArray *dataArr;
 
 @end

@@ -12,7 +12,7 @@
 
 
 @property(nonatomic,copy)NSString *imageURL;
-@property(nonatomic,copy)NSString *photosId;
+//@property(nonatomic,copy)NSString *photosId;
 @property(nonatomic,strong)PhotoScrollView *scrollView;
 
 

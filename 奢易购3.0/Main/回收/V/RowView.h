@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RowView : UIView
+@interface RowView : UIView<UITextFieldDelegate>
+
+
+
+@property (nonatomic,strong) NSDictionary *dataDic;
+
+@property (nonatomic,assign) NSInteger index;
 
 @end

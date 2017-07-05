@@ -10,15 +10,16 @@
 
 @implementation CustomerInformationCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setDic:(NSDictionary *)dic{
+    
+    _dic = dic;
+    
+    _nameLabel.text = _dic[@"name"];
+    _phoneLabel.text = _dic[@"mobile"];
+    
+    _weixinLabel.text =  _dic[@"wechat"];
+    
 }
 
 @end

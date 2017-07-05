@@ -10,4 +10,15 @@
 
 @interface HSJLView : UIView
 
+
+typedef  void(^BackBlock)();
+
+@property (nonatomic,copy) BackBlock backBlock;
+
+@property (nonatomic,strong) NSDictionary *dic;
+
+@property (nonatomic,strong) UILabel *title;
+
+@property (nonatomic,copy) NSString *remark;
+
 @end

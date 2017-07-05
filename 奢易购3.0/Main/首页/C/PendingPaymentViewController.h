@@ -10,4 +10,12 @@
 
 @interface PendingPaymentViewController : UIViewController
 
+
+@property (nonatomic,copy) NSString *type;
+
+@property (nonatomic,copy) NSString *salesId;
+
+@property (nonatomic,strong) NSArray *arr;
+
+
 @end

@@ -10,8 +10,13 @@
 
 @implementation StockCellectionCell
 
-- (void)awakeFromNib {
-    // Initialization code
+
+- (void)setUrl:(NSString *)url{
+
+    _url = url;
+    
+    [_imageV sd_setImageWithURL:[NSURL URLWithString:_url]];
+    
 }
 
 @end

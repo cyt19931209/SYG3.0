@@ -10,4 +10,7 @@
 
 @interface AccountListViewController : UIViewController
 
+
+@property (nonatomic,copy) NSString *titleStr;
+
 @end

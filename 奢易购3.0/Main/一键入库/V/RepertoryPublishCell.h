@@ -10,4 +10,15 @@
 
 @interface RepertoryPublishCell : UITableViewCell
 
+
+
+
+@property (nonatomic,strong) NSDictionary *dic;
+
+@property (weak, nonatomic) IBOutlet UIImageView *titleImageV;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *snLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *add_timeLabel;
+
 @end

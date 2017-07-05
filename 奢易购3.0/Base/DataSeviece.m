@@ -8,9 +8,7 @@
 
 #import "DataSeviece.h"
 #import "AFNetworking.h"
-#define BaseUrl @"http://192.168.1.172:8090/rmjysit" 
-//#define BaseUrl @"http://111.113.28.26:8910/rmjysit"
-//#define BaseUrl @"http://192.168.1.184:8080/rmjysit"
+#import "MBProgressHUD.h"
 
 @implementation DataSeviece
 
@@ -25,9 +23,21 @@
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSLog(@"%@\n %@",url,param);
+    
+    NSDictionary *parameters = @{@"data":param};
+
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+//    NSLog(@"%@",[defaults objectForKey:@"sessionId"]);
+    
+//    [manager.requestSerializer setValue:[NSString stringWithFormat:@"PHPSESSID=%@",[defaults objectForKey:@"sessionId"]]   forHTTPHeaderField:@"Cookie"];
+//    [manager.requestSerializer setValue:@"PHPSESSID=1r19ojcnjagrrv7ljahja45892"   forHTTPHeaderField:@"Cookie"];
+    
+    [manager.requestSerializer setValue:@"21" forHTTPHeaderField:@"appVerCode"];
+
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     
-    [manager POST:url parameters:param success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager POST:url parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         
         successBlock(responseObject);
         [hud hide:YES];

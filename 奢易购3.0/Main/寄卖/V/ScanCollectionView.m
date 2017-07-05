@@ -12,6 +12,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     
+    _index = 0;
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc]init];
     
     layout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
@@ -33,6 +34,14 @@
     return self;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    CGFloat contentOffsetX = scrollView.contentOffset.x;
+    
+    NSLog(@"%lf",contentOffsetX);
+    
+    _index = contentOffsetX/(kScreenWidth+40);
+}
 
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -47,7 +56,7 @@
     
 //    2.把数组传到cell中
     cell.imageURL=_imageURLArr[indexPath.item];
-    cell.photosId = _photosIdArr[indexPath.item];
+//    cell.photosId = _photosIdArr[indexPath.item];
     return cell;
 }
 

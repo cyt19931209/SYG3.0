@@ -10,4 +10,8 @@
 
 @interface AccountBindingViewController : UIViewController
 
+
+
+@property (nonatomic,strong) NSDictionary *dataDic;
+
 @end

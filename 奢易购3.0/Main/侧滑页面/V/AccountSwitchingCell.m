@@ -10,15 +10,24 @@
 
 @implementation AccountSwitchingCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+
+- (void)setDic:(NSDictionary *)dic{
+
+    _dic = dic;
+
+    if ([_dic[@"type"] isEqualToString:@"3"]) {
+        _imageV.image = [UIImage imageNamed:@"dy@2x"];
+    }else if ([_dic[@"type"] isEqualToString:@"2"]){
+        _imageV.image = [UIImage imageNamed:@"dz@2x"];
+    }else if ([_dic[@"type"] isEqualToString:@"1"]){
+        _imageV.image = [UIImage imageNamed:@"gl@2x"];
+    }
+    
+    _nameLabel.text = _dic[@"user_name"];
+    
+    _phoneLabel.text = _dic[@"mobile"];
+
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

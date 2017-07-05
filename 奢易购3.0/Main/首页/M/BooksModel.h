@@ -10,4 +10,12 @@
 
 @interface BooksModel : BaseModel
 
+
+@property (nonatomic,strong) NSArray *item;
+
+@property (nonatomic,copy) NSString *day;
+@property (nonatomic,copy) NSString *input;
+@property (nonatomic,copy) NSString *out1;
+@property (nonatomic,copy) NSString *is_read;
+
 @end

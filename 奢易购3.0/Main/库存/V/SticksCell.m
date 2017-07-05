@@ -10,15 +10,25 @@
 
 @implementation SticksCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+
+
+- (void)setDic:(NSDictionary *)dic{
+    
+    _dic = dic;
+
+    _nameLabel.text = _dic[@"user_name"];
+    
+    _phoneLabel.text = _dic[@"mobile"];
+    
+    if ([_dic[@"type"] isEqualToString:@"1"]) {
+        _titleLabel.text = @"老板";
+    }else if ([_dic[@"type"] isEqualToString:@"2"]){
+        _titleLabel.text = @"店长";
+    }else if ([_dic[@"type"] isEqualToString:@"3"]){
+        _titleLabel.text = @"店员";
+    }
+    
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

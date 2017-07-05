@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef  void(^BackBlock)();
+
 @interface CalculatorView : UIView
 
+
+@property (nonatomic,copy) BackBlock backBlock;
+
+//显示Label
+@property (weak, nonatomic) IBOutlet UILabel *numLabel;
+//是否清空
+@property (nonatomic,assign) BOOL isEmpty;
+//旧数字
+@property (nonatomic,copy) NSString *oldStr;
+//记录算法
+@property (nonatomic,copy) NSString *recordStr;
+
 @end
+

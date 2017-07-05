@@ -10,4 +10,12 @@
 
 @interface PasswordRecoveryViewController : UIViewController
 
+
+
+//@property (weak, nonatomic) IBOutlet UITextField *YZMTextField;
+//@property (weak, nonatomic) IBOutlet UIButton *KQYZMButton;
+//@property (weak, nonatomic) IBOutlet UITextField *SJHTextField;
+//@property (weak, nonatomic) IBOutlet UIView *bgView;
+//@property (weak, nonatomic) IBOutlet UIView *bgView1;
+//
 @end

@@ -10,4 +10,16 @@
 
 @interface EditRemarkViewController : UIViewController
 
+
+
+@property (nonatomic,strong) NSDictionary *dic;
+
+@property (nonatomic,copy) NSString *text_id;
+
+@property (nonatomic,copy) NSString *text_title;
+
+@property (nonatomic,copy) NSString *remarktext;
+
+@property (nonatomic,copy) NSString *goods_id;
+
 @end

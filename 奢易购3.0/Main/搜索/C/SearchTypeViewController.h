@@ -10,4 +10,8 @@
 
 @interface SearchTypeViewController : UIViewController
 
+
+@property (nonatomic,strong) NSArray *selectArr;
+@property (nonatomic,copy) NSString *type;
+
 @end

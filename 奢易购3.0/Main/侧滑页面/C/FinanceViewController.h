@@ -10,4 +10,7 @@
 
 @interface FinanceViewController : UIViewController
 
+
+@property (nonatomic,assign)BOOL isPersonnel;
+
 @end

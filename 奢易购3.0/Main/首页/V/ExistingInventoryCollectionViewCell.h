@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StockModel.h"
+
 
 @interface ExistingInventoryCollectionViewCell : UICollectionViewCell
+
+
+@property (nonatomic,strong) StockModel *model;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 
 @end

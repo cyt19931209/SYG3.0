@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaymentCell : UITableViewCell
+@interface PaymentCell : UITableViewCell<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIView *bgV1;
+@property (weak, nonatomic) IBOutlet UIView *bgV2;
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property (weak, nonatomic) IBOutlet UITextField *ZHTextField;
+@property (weak, nonatomic) IBOutlet UITextField *moneyTextField;
+
+
+@property (nonatomic,strong) NSDictionary *dic;
+
+@property (nonatomic,assign) NSInteger index;
+
+@property (nonatomic,copy) NSString *account_id;
 
 @end

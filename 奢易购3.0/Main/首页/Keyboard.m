@@ -21,7 +21,7 @@
 {
     
     if ([super initWithFrame:frame]) {
-        self.backgroundColor=[UIColor blackColor];
+        self.backgroundColor=[UIColor clearColor];
         //初始化显示的是0
         self.result=[[NSMutableString alloc]initWithFormat:@"0"];
         flag=YES;
@@ -182,10 +182,18 @@
         //判断如果运算完之后继续运算的话，用之前的结果当做第一个数
     }
     //为运算类的两个数赋值
+    
     oper.number1=self.num2;
     oper.number2=self.num1;
     //NSLog(@"%d",oper.number2);
-    [self.result setString:[oper getResult]];//执行运算方法
+    NSLog(@"%@ %f %f ",self.result,_num1,_num2);
+    
+    
+    if ([self.result isEqualToString:@"0"]||[self.result isEqualToString:@""]||_num1 == 0||_num2 == 0) {
+    }else{
+        [self.result setString:[oper getResult]];//执行运算方法
+    }
+    
     [self ClearZero];
     UILabel *l=(UILabel*)[[self superview] viewWithTag:1];
     l.text=self.result;
@@ -193,6 +201,7 @@
     [self.result setString:@""];
     self.num2=0;
     //置空，为下一下次输入准备
+    
 }
 
 -(void)symbol:(UIButton*)btn

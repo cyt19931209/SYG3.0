@@ -31,7 +31,7 @@
     //左边Item
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.frame = CGRectMake(0, 0, 10, 19);
-    [leftBtn setImage:[UIImage imageNamed:@"Back Chevron@2x"] forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:@"返回（20x38）.png"] forState:UIControlStateNormal];
     [leftBtn addTarget:self action:@selector(leftBtnAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * leftButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
     
@@ -114,15 +114,11 @@
     
     
     //改变导航栏标题的字体颜色和大小
-    UIImage *image = [UIImage imageNamed:@"navbar@2x"];
-    [self.navigationController.navigationBar setBackgroundImage:image
-                                                  forBarMetrics:UIBarMetricsDefault];
-    
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:18],
-       NSForegroundColorAttributeName:[RGBColor colorWithHexString:@"#787fc6"]}];
+       NSForegroundColorAttributeName:[RGBColor colorWithHexString:@"#ffffff"]}];
     
-    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航栏背景.png"] forBarMetrics:UIBarMetricsDefault];
     
 }
 

@@ -10,4 +10,7 @@
 
 @interface SearchViewController : UIViewController
 
+@property (nonatomic,strong) NSArray *selectArr;
+
+
 @end

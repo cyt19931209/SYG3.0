@@ -10,4 +10,11 @@
 
 @interface CustomerInformationCell : UITableViewCell
 
+
+@property (nonatomic,strong) NSDictionary *dic;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *weixinLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+
 @end

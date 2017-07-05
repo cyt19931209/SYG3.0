@@ -10,4 +10,12 @@
 
 @interface BrandChoiceViewController : UIViewController
 
+
+
+
+@property (nonatomic,copy) NSString *sort_id;
+
+
+
+
 @end

@@ -36,10 +36,10 @@
     
 }
 
-- (void)setPhotosId:(NSString *)photosId{
-    _photosId = photosId;
-    _scrollView.photosId = _photosId;
-}
+//- (void)setPhotosId:(NSString *)photosId{
+//    _photosId = photosId;
+//    _scrollView.photosId = _photosId;
+//}
 
 -(void)creatScorllView{
     

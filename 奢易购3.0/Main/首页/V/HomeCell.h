@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeModel.h"
 
 @interface HomeCell : UITableViewCell
+
+@property (nonatomic,strong) HomeModel *model;
+@property (nonatomic,strong) NSArray *arr;
+@property (nonatomic,assign) NSInteger homeType;
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property (weak, nonatomic) IBOutlet UILabel *SPMLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 
 @end

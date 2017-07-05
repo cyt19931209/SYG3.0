@@ -10,4 +10,11 @@
 
 @interface EditSNViewController : UIViewController
 
+
+@property (nonatomic,strong) NSDictionary *dic;
+
+@property (nonatomic,copy) NSString *goods_id;
+
+@property (nonatomic,copy) NSString *snStr;
+
 @end

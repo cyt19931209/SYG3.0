@@ -10,4 +10,7 @@
 
 @interface MessageXQViewController : UIViewController
 
+
+@property (nonatomic,copy) NSString *XQId;
+
 @end

@@ -10,12 +10,69 @@
 
 @implementation CalculatorView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
+//返回
+- (IBAction)backAction:(id)sender {
+    
+    _backBlock();
+    
+}
+//复制数字
+- (IBAction)copyAction:(id)sender {
+    
+    
+}
+
+//计算机
+- (IBAction)buttonAction:(UIButton *)sender {
+    
+    if (sender.tag == 100) {
+        if ([_numLabel.text isEqualToString:@"0"]||_isEmpty) {
+            _numLabel.text = @"(";
+        }
+        
+        
+    }else if (sender.tag == 101){
+    
+    }else if (sender.tag == 102){
+        
+    }else if (sender.tag == 103){
+        
+    }else if (sender.tag == 104){
+        
+    }else if (sender.tag == 105){
+        
+    }else if (sender.tag == 106){
+        
+    }else if (sender.tag == 107){
+        
+    }else if (sender.tag == 108){
+        
+    }else if (sender.tag == 109){
+        
+    }else if (sender.tag == 110){
+        
+    }else if (sender.tag == 111){
+        
+    }else if (sender.tag == 112){
+        
+    }else if (sender.tag == 113){
+        
+    }else if (sender.tag == 114){
+        
+    }else if (sender.tag == 115){
+        
+    }else if (sender.tag == 116){
+        
+    }else if (sender.tag == 117){
+        
+    }else if (sender.tag == 118){
+        
+    }else if (sender.tag == 119){
+        
+    }else if (sender.tag == 120){
+        
+    }    
+    
+}
 @end

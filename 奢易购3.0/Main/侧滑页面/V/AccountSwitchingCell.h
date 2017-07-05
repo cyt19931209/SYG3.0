@@ -10,4 +10,11 @@
 
 @interface AccountSwitchingCell : UITableViewCell
 
+
+
+@property (nonatomic,strong) NSDictionary *dic;
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+
 @end

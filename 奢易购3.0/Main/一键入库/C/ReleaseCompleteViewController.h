@@ -10,4 +10,11 @@
 
 @interface ReleaseCompleteViewController : UIViewController
 
+
+
+@property (nonatomic,strong)NSArray *arr;
+
+
+@property (nonatomic,strong) NSDictionary *dataDic;
+
 @end

@@ -17,7 +17,7 @@
     NSArray *allKeysArr = [mutableDic allKeys];
 
     for (NSString *key in allKeysArr) {
-        if ([mutableDic[key] isKindOfClass:[NSNull class]]) {
+        if ([mutableDic[key] isKindOfClass:[NSNull class]]||mutableDic[key] == nil) {
         
             [mutableDic setValue:@"" forKey:key];
         }

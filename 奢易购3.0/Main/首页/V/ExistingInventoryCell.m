@@ -10,15 +10,26 @@
 
 @implementation ExistingInventoryCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)setModel:(StockModel *)model{
+    _model = model;
+    
+    _nameLabel.text = _model.goods_name;
+    
+    _numberLabel.text = [NSString stringWithFormat:@"x%@",_model.number];
 
-    // Configure the view for the selected state
+    if ([_model.type isEqualToString:@"JM"]) {
+        _imageV.image = [UIImage imageNamed:@"jm@2x"];
+        _moneyLabel.text = [NSString stringWithFormat:@"￥%ld",[model.customer_price integerValue]];
+        
+    }else{
+        _imageV.image = [UIImage imageNamed:@"hs@2x"];
+        _moneyLabel.text = [NSString stringWithFormat:@"￥%ld",[model.price integerValue]];
+        
+    }
+    
+    _HHLabel.text = [NSString stringWithFormat:@"货号:%@",_model.goods_sn];
+    
 }
 
 @end

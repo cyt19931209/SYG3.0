@@ -10,4 +10,9 @@
 
 @interface CustomerInformationViewController : UIViewController
 
+
+
+@property (nonatomic,copy) NSString *KHId;
+
+
 @end

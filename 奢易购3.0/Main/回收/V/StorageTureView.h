@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StorageTureView : UIView
+@interface StorageTureView : UIView<UITableViewDataSource,UITableViewDelegate>
 
 @end
